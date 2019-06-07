@@ -1,4 +1,4 @@
-## [How to train YOLOv2 to detect custom objects](https://medium.com/@manivannan_data/how-to-train-yolov2-to-detect-custom-objects-9010df784f36)
+## [How to train YOLOv2 to detect custom objects][source]
 
 yolo train with custom object (ubuntu 16.04)
 
@@ -266,3 +266,4 @@ Note: This is for single object detection. Please use this [link](https://medium
 
 
 
+[source]: https://medium.com/@manivannan_data/how-to-train-yolov2-to-detect-custom-objects-9010df784f36
