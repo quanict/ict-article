@@ -57,6 +57,6 @@ As always, I will gladly accept comments or questions in the comment section to 
 
 [config.png]: img/config.png
 [Untitled-1.png]: img/Untitled-1.png
-[Intersection_over_Union_-_visual_equation-1.png]: img/Intersection_over_Union_-_visual_equation-1.png
+[Intersection_over_Union_-_visual_equation-1.png]: ../img/Intersection_over_Union_-_visual_equation-1.png
 [firstLine.png]: img/firstLine.png
 
