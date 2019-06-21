@@ -111,11 +111,124 @@ tiny-yolo.cfg
 yolo.cfg
 ```
 
+For this example we will use the full yolo configuration, for that we need to create a copy of this file `yolo.cfg`, that we will need to modify for our problem
+
+```
+cp cfg/yolo.cfg cfg/yolo-new.cfg
+# modify cfg/yolo-new.cfg
+vi cfg/yolo-new.cfg
+```
+
+We need to modify two lines:
+
+1. In the last **[convolutional]** section, we need to change the number of `filters` , the formula is `filters=(number of classes + 5)*5` , since we have only one class, we set `filters=30` .
+2. Under the section **[region]** there is a line to specify the number of classes (around line 244), change it to `classes=1` or the number of classes you have.
+
+> **NOTE**: There is a series of parameters, specially at the beginning of the file, that are taken directly from Darknet, but do not make a difference in Darkflow. For instance `batch=32` will be ignored by Darkflow, we need to specify the batch size in the command line (with `--batch <batch_size>`), otherwise it will take a default of 16. Other instance of this is the learning rate you need to specify it with `--lr <learning_rate>`.
+
+There is also another file that will be necessary, it is a text file containing the name of the classes, one for each line, since we only have one class, we can create it directly from command line
+
+```
+echo "map_text" >> one_label.txt
+```
+
+## Step 5: Starting the training
+
+We have come a long way, haven’t we? The good news is that we are ready to run the training.
+
+Just as a reminder, in Step 2 we created the training set, consisting in several image files and their corresponding xml file containing the annotations. They will be stored in these locations (you need to substitute `<path_to_bbox-label-tool>` with the actual path you installed the script.
+
+```
+<path_to_bbox-label-tool>/Images/002
+<path_to_bbox-label-tool>/AnnotationsXML/002
+```
+
+Now, coming back to Darkflow, to start the training we need to run
+
+```
+python3 flow --model cfg/yolo-new.cfg \
+    --labels one_label.txt  \
+    --train --trainer adam \
+    --dataset "<path_to_bbox-label-tool>/Images/002" \
+    --annotation "<path_to_bbox-label-tool>/AnnotationsXML/002"
+```
+
+If you have GPU to train (and you should!), you may add to this command
+
+```
+--gpu 1.0
+```
+
+Darkflow should then start booting up and loading the images, eventually you should start seeing lines like these, printing the loss of each training step:
+
+```
+...
+step 1 - loss 227.32052612304688 - moving ave loss 227.3205261230469
+step 2 - loss 226.1829376220703 - moving ave loss 227.2067672729492
+step 3 - loss 225.60186767578125 - moving ave loss 227.046277313232
+step 4 - loss 227.2750701904297 - moving ave loss 227.0691566009522
+step 5 - loss 227.2261199951172 - moving ave loss 227.0848529403687
+...
+```
+
+
+As you probably know by now, deep learning usually takes a lot of time to train. The time will obviously depend entirely in your hardware, the size of your training set, etc. It may take everything from one hour to several days to give useful results.
+
+By default Darkflow will save a checkpoint every 250 steps, so you can stop the training at any time to take a break and/or validate the current weights. **If you want to restart from the last checkpoint, you just need to add --load -1 to the same command you used to start the training.**
+
+> I recommend you take a look at these terminal tips and tricks to easily monitor the current state of your training, including instantly plotting the loss value at [link][5]
+
+![img-9]
+
+## Step 6: Validating the results
+
+At any point you can stop the training and test the detection in a (hopefully never seen by training) set of images, given you have these images in `<path_to_imgs>` :
+
+```
+python3 flow --model cfg/yolo-new.cfg \
+    --imgdir <path_to_imgs> \
+    --load -1 \
+    --labels one_label.txt \
+    --gpu 1.0
+```
+
+By default it will create a directory called out inside `<path_to_imags>` with the annotated images. For instance these are some of the results after training on my dataset for about a day. Is not perfect, but is pretty reasonable given the size of the training set (not quite big) and the difficulty of the problem.
+
+- Some examples of the trained YOLO.
+
+![img-10]
+![img-11]
+![img-12]
+![img-13]
+![img-14]
+![img-15]
+![img-16]
+
+## Where can I find the model and the weights?
+
+### Update 2018–09–11
+
+The architecture of the model is defined in the .cfg file that we modified during **Step 4**, so we have to be careful to retain it.
+
+Darkflow will store the weights in the same directory as the checkpoint information. By default it will use `<your_git_directory>/darkflow/ckpt` . Four files will be created every checkpoint, and a text file called `checkpoint` will be updated.
+
+![img-17]
+
+According [to this][6], the **.meta** file is where the weights are stored. And [here][7] it says the **.meta**, **.index** and **.data** are files related to TensorFlow.
+
+
+
+
+
+
 [source]: https://medium.com/coinmonks/detecting-custom-objects-in-images-video-using-yolo-with-darkflow-1ff119fa002f
 [1]: https://pjreddie.com/darknet/yolo/
 [2]: https://medium.com/@monocasero/object-detection-with-yolo-implementations-and-how-to-use-them-5da928356035
 [3]: http://cocodataset.org/#home
 [4]: http://host.robots.ox.ac.uk/pascal/VOC/
+[5]: https://medium.com/@monocasero/useful-terminal-tips-and-tricks-for-the-machine-learning-practitioner-6e96b61b2bc2
+[6]: https://github.com/thtrieu/darkflow/issues/256
+[7]: https://github.com/thtrieu/darkflow/issues/309
 [Darknet]: https://pjreddie.com/darknet/
 [Darkflow]: https://github.com/thtrieu/darkflow
 [BBox-Label-Tool]: https://github.com/enriqueav/BBox-Label-Tool
@@ -130,3 +243,11 @@ yolo.cfg
 [img-7]: img/1_A50qUpI90g3euj_8Kgj32Q.png
 [img-8]: img/1_dwytIYHTOqvSmu3ek54-tQ.png
 [img-9]: img/1_RLODdaCUjb2palQDRa1m7Q.png
+[img-10]: img/1_9rp5NJFKU9bvXgdDTTA68w.jpeg
+[img-11]: img/1_8mcJFSsDLftnPTukQXbukw.jpeg
+[img-12]: img/1_j-7qE9hU7j1kymOhLvyyzQ.jpeg
+[img-13]: img/1_vk_095cxmJiV8soKGX719A.jpeg
+[img-14]: img/1_cebXjtD13bMx4Im1gVnt6g.jpeg
+[img-15]: img/1_V1O5xnsN5oSuOeS5-KICoA.jpeg
+[img-16]: img/1_0j7kojY1-FMILVBhjhsjaA.jpeg
+[img-17]: img/1_9rzTxlvxzuQzoyRSgwwSBg.png
