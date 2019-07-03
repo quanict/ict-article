@@ -205,8 +205,12 @@ $ python correct_skew.py --image images/pos_41.png
 
 Regardless of skew angle, our algorithm is able to correct for skew in images using OpenCV and Python.
 
+## other resource
 
-
+```
+https://github.com/jhansireddy/AndroidScannerDemo
+```
+---
 
 [04]: http://stackoverflow.com/questions/15956124/minarearect-angles-unsure-about-the-angle-returned
 [03]: https://www.pyimagesearch.com/opencv-tutorials-resources-guides/
