@@ -41,8 +41,8 @@ Những điểm tam giác và vuông đại diện cho những email chúng ta �
 
 Sơ lược quy trình phân loại thư được mô tả sau. Trước hết, ta cần một thuật toán để chuyển email thành những điểm dữ liệu. Công đoạn này rất rất quan trọng vì nếu chúng ta chọn được biểu diễn phù hợp, công việc của perceptron sẽ nhẹ nhàng hơn rất nhiều. Tiếp theo, perceptron sẽ đọc tọa độ của từng điểm và sử dụng thông tin này để cập nhật tham số của đường thẳng cần tìm. Các bạn có thể xem qua demo của perceptron \(điểm xanh lá cây là điểm perceptron đang xử lý\)
 
-```
-{% embed url="https://www.youtube.com/watch?v=vGwemZhPlsA" %}
+```embed
+url="https://www.youtube.com/watch?v=vGwemZhPlsA"
 ```
 
 
