@@ -54,7 +54,9 @@ Lúc này, ta cần các loại đường phân chia "không thẳng". Nhưng đ
 
 Perceptron là một thuật toán **supervised learning:** ta đưa cho máy tính hàng loạt các ví dụ cùng câu trả lời mẫu với hy vọng máy tính sẽ tìm được những đặc điểm cần thiết để đưa ra dự đoán cho những ví dụ khác chưa có câu trả lời trong tương lai. Ngoài ra, cũng có những thuật toán machine learning không cần câu trả lời mẫu, được gọi là **unsupervised learning**. Trong trường hợp này, máy tính cố gắng khai thác ra cấu trúc ẩn của một tập dữ liệu mà không cần câu trả lời mẫu. Một loại machine learning khác được gọi là **reinforcement learning**. Trong dạng này, cũng không hề có câu trả lời mẫu, nhưng thay vì đó máy tính nhận được phản hồi cho mỗi hành động. Dựa vào phản hồi tích cực hay tiêu cực mà máy tính sẽ điều chỉnh hoạt động cho phù hợp. Sau đây là một ví dụ minh họa
 
-{% embed url="https://www.youtube.com/watch?v=m4J2WLOvrHg" %}
+```embed
+url="https://www.youtube.com/watch?v=m4J2WLOvrHg"
+```
 
 
 
