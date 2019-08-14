@@ -216,11 +216,6 @@ Darkflow will store the weights in the same directory as the checkpoint informat
 
 According [to this][6], the **.meta** file is where the weights are stored. And [here][7] it says the **.meta**, **.index** and **.data** are files related to TensorFlow.
 
-
-
-
-
-
 [source]: https://medium.com/coinmonks/detecting-custom-objects-in-images-video-using-yolo-with-darkflow-1ff119fa002f
 [1]: https://pjreddie.com/darknet/yolo/
 [2]: https://medium.com/@monocasero/object-detection-with-yolo-implementations-and-how-to-use-them-5da928356035
