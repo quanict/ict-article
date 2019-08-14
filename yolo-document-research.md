@@ -17,3 +17,7 @@
 ## object detection
 - https://github.com/BichenWuUCB/squeezeDet
 - https://github.com/omni-us/squeezedet-keras
+
+
+
+https://github.com/prakharcode/yolo-server
