@@ -158,3 +158,4 @@ There are some other ways to deploy flask app which are as follows:
 [02]: https://www.nginx.com/
 [01]: http://flask.pocoo.org/
 [img-01]: img/1_nFxyDwJ2DEH1G5PMKPMj1g.png
+[source]: https://medium.com/ymedialabs-innovation/deploy-flask-app-with-nginx-using-gunicorn-and-supervisor-d7a93aa07c18

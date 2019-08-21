@@ -21,3 +21,11 @@
 
 
 https://github.com/prakharcode/yolo-server
+
+
+https://towardsdatascience.com/you-only-look-once-yolo-implementing-yolo-in-less-than-30-lines-of-python-code-97fb9835bfd2
+https://github.com/Garima13a/YOLO-Object-Detection
+
+https://www.analyticsvidhya.com/blog/2018/12/practical-guide-object-detection-yolo-framewor-python/
+
+https://www.pyimagesearch.com/2014/11/17/non-maximum-suppression-object-detection-python/
