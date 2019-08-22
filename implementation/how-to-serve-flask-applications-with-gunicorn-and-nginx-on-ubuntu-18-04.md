@@ -274,4 +274,4 @@ If you see any errors, be sure to resolve them before continuing with the tutori
 [03]: https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04
 [02]: https://www.nginx.com/
 [01]: http://gunicorn.org/
-[source]: https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04#step-1-—-installing-the-components-from-the-ubuntu-repositories
+[source]: https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-18-04
