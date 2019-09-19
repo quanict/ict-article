@@ -756,16 +756,9 @@ Whenever you need to find duplicate or near-duplicate images in a dataset, defin
 
 ## Where can I learn more about image search engines?
 
-[img-17]: img/pyimagesearch_gurus_overview.jpg
-[img-12]: img/image_hashing_search_engine_result01.jpg
-[img-13]: img/image_hashing_search_engine_result02.jpg
-[img-14]: img/image_hashing_search_engine_result03.jpg
-[img-15]: img/image_hashing_search_engine_result04-1.jpg
-[img-16]: img/image_hashing_search_engine_result05.jpg
-
 [![img-17]][04]
 
-### Are you yearning to learn more about image search engines?
+## Are you yearning to learn more about image search engines?
 
 Perhaps you have a project where you need to implement an image search engine that **scales to millions of images**. Inside the [PyImageSearch Gurus course][04] you’ll learn how to build such a scalable image search engine from the ground up.
 
@@ -784,10 +777,10 @@ You won’t find a more detailed computer vision course anywhere else online, I 
 
 ### Just take a look at what these course graduates have accomplished:
 
-- Tuomo Hiipala – Awarded $30,500 USD to study how computer vision can impact visual culture.
-- Saideep Talari – Completely changed his and his family’s life by studying computer vision. He is now CTO of SenseHawk, working with drones for agriculture and solar farms.
-- David Austin – 1st place winner (out of 3,343 teams) on the Kaggle Iceberg Classifier Challenge landing $25,000 USD.
-- Jeff Bass – Speaker at PyImageConf 2018, maintainer of ImageZMQ, and Raspberry Pi expert at Yin Yang Ranch.
+- [Tuomo Hiipala][15] – Awarded $30,500 USD to study [how computer vision can impact visual culture][16].
+- [Saideep Talari][17] – Completely changed his and his family’s life by studying computer vision. He is now CTO of SenseHawk, working with [drones for agriculture and solar farms][18].
+- [David Austin][19] – 1st place winner (out of 3,343 teams) on the [Kaggle Iceberg Classifier Challenge][20] landing $25,000 USD.
+- [Jeff Bass][21] – Speaker at [PyImageConf 2018][22], maintainer of [ImageZMQ][23], and Raspberry Pi expert at [Yin Yang Ranch][24].
 - …and many others!
 
 You can join these Gurus and other students with a passion to learn and become experts in their fields. Whether you are just getting started or you have a foundation to build upon, the Gurus course is for you.
@@ -807,6 +800,22 @@ If you are ever building a computer vision application that requires quickly fin
 
 ----
 
+[24]: https://yin-yang-ranch.com/
+[23]: https://www.pyimagesearch.com/2019/04/15/live-video-streaming-over-network-with-opencv-and-imagezmq/
+[22]: https://www.pyimagesearch.com/2018/10/01/pyimageconf-2018-recap/
+[21]: https://www.pyimagesearch.com/2019/04/17/an-interview-with-jeff-bass-creator-of-imagezmq/
+[20]: https://www.kaggle.com/c/statoil-iceberg-classifier-challenge/leaderboard
+[19]: https://www.pyimagesearch.com/2018/03/26/interview-david-austin-1st-place-25000-kaggles-popular-competition/
+[18]: https://sensehawk.com/
+[17]: https://www.pyimagesearch.com/2017/06/12/pyimagesearch-gurus-member-spotlight-saideep-talari/
+[16]: https://www.inthefieldstories.net/a-humanist-take-on-scientific-computing/
+[15]: https://www.pyimagesearch.com/2016/03/14/pyimagesearch-gurus-member-spotlight-tuomo-hiippala/
+[img-17]: img/pyimagesearch_gurus_overview.jpg
+[img-12]: img/image_hashing_search_engine_result01.jpg
+[img-13]: img/image_hashing_search_engine_result02.jpg
+[img-14]: img/image_hashing_search_engine_result03.jpg
+[img-15]: img/image_hashing_search_engine_result04-1.jpg
+[img-16]: img/image_hashing_search_engine_result05.jpg
 [12]: https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/
 [13]: https://www.numpy.org/
 [14]: https://github.com/jrosebr1/imutils
