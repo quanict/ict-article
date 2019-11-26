@@ -480,8 +480,6 @@ Moving on, the next block is identical to the block from the YOLO image processi
 
 
 
-
-
 [source]: https://www.pyimagesearch.com/2018/11/12/yolo-object-detection-with-opencv/
 [arxiv-YOLO]: https://arxiv.org/abs/1506.02640
 [coco.names]: https://github.com/pjreddie/darknet/blob/master/data/coco.names
