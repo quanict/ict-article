@@ -14,6 +14,7 @@ https://github.com/Cartucho/mAP
 https://medium.com/@timothycarlen/understanding-the-map-evaluation-metric-for-object-detection-a07fe6962cf3
 https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection-45c121a31173
 
-
+https://www.pyimagesearch.com/2018/11/12/yolo-object-detection-with-opencv/
+https://www.learnopencv.com/training-yolov3-deep-learning-based-custom-object-detector/
 
 https://github.com/thtrieu/darkflow
