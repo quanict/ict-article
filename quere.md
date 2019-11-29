@@ -16,5 +16,6 @@ https://medium.com/@jonathan_hui/map-mean-average-precision-for-object-detection
 
 https://www.pyimagesearch.com/2018/11/12/yolo-object-detection-with-opencv/
 https://www.learnopencv.com/training-yolov3-deep-learning-based-custom-object-detector/
+https://www.learnopencv.com/deep-learning-based-object-detection-using-yolov3-with-opencv-python-c/
 
 https://github.com/thtrieu/darkflow
