@@ -44,3 +44,10 @@ $ git remote -v
 ```
 git rm -r --cached [directory-name]
 ```
+
+## Remember
+
+```
+eval `ssh-agent -s`
+ssh-add ~/.ssh/*_rsa
+```
